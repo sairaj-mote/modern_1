@@ -1,0 +1,127 @@
+body{
+    scroll-behavior: smooth;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.crimson,.red,.pink,.purple,.indigo,.blue,.teal,.deep-orange,.brown,.blue-grey,.black{
+    color: white !important;
+}
+.grey,.yellow,.amber,.orange,.green,.cyan,.white{
+    color: black !important;
+}
+
+.hover-red,.hover-pink,.hover-purple,.hover-indigo,.hover-blue,.hover-teal,.hover-deep-orange,.hover-brown,.hover-blue-grey,.hover-black{
+    color: white !important;
+}
+.hover-grey,.hover-yellow,.hover-amber,.hover-orange,.hover-green,.hover-cyan,.hover-white{
+    color: black !important;
+}
+
+.black{
+    background-color: black !important;
+}
+.white{
+    background-color: white !important;
+}
+.crimson{
+    background-color: crimson !important;
+}
+.orange{
+    background-color: #ff9800 !important;
+}
+.red{
+    background-color: #f44336 !important;
+}
+.pink{
+    background-color: #e91e63 !important;
+}
+.purple{
+    background-color: #9c27b0 !important;
+}
+.indigo{
+    background-color: #3f51b5 !important;
+}
+.blue{
+    background-color: #2196f3 !important;
+}
+.cyan{
+    background-color: #00bcd4 !important;
+}
+.teal{
+    background-color: #009688 !important;
+}
+.green{
+    background-color: #4caf50 !important;
+}
+.yellow{
+    background-color: #ffeb3b !important;
+}
+.amber{
+    background-color: #ffc107 !important;
+}
+.deep-orange{
+    background-color: #ff5722 !important;
+}
+.brown{
+    background-color: #795548 !important;
+}
+.grey{
+    background-color: #9e9e9e !important;
+}
+.blue-grey{
+    background-color: #607d8b !important;
+}
+
+
+.hover-black:hover{
+    background-color: black !important;
+}
+.hover-white:hover{
+    background-color: white !important;
+}
+.hover-orange:hover{
+    background-color: #ff9800 !important;
+}
+.hover-red:hover{
+    background-color: #f44336 !important;
+}
+.hover-pink:hover{
+    background-color: #e91e63 !important;
+}
+.hover-purple:hover{
+    background-color: #9c27b0 !important;
+}
+.hover-indigo:hover{
+    background-color: #3f51b5 !important;
+}
+.hover-blue:hover{
+    background-color: #2196f3 !important;
+}
+.hover-cyan:hover{
+    background-color: #00bcd4 !important;
+}
+.hover-teal:hover{
+    background-color: #009688 !important;
+}
+.hover-green:hover{
+    background-color: #4caf50 !important;
+}
+.hover-yellow:hover{
+    background-color: #ffeb3b !important;
+}
+.hover-amber:hover{
+    background-color: #ffc107 !important;
+}
+.hover-deep-orange:hover{
+    background-color: #ff5722 !important;
+}
+.hover-brown:hover{
+    background-color: #795548 !important;
+}
+.hover-grey:hover{
+    background-color: #9e9e9e !important;
+}
+.hover-blue-grey:hover{
+    background-color: #607d8b !important;
+}

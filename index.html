@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Lorem Ipsum</title>
+        <meta name="theme-color" content="#dc143c">
+        <meta name="description" content="homepage of lorem ipsum"/>
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="jquery.min.js" async></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <style>
+            body{
+                font-family: 'Righteous', cursive;
+                scroll-behavior: smooth;
+                padding: 0 !important;
+                margin: 0 !important;
+                -webkit-tap-highlight-color: transparent;
+            }
+            @font-face {
+                font-family: 'Righteous', cursive;
+                font-display: swap;
+                src: url(https://fonts.googleapis.com/css?family=Righteous&display=swap);
+            }
+            .white{
+                background-color: white !important;
+                color:black !important;
+            }
+            .crimson{
+                background-color: crimson !important;
+                color:white !important;
+            }
+            :root{
+                scroll-behavior: smooth;
+                font-size: 16px;
+            }
+            *{
+                box-sizing: border-box;   
+            }
+            .container{
+                display: flex;
+                overflow: hidden;
+                position: relative;
+                padding: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                transition: all 0.2s ease;
+            }
+            .shadow{
+                box-shadow: 0px 2px 20px #00000020;
+                -webkit-box-shadow: 0px 2px 20px #00000020;
+            }
+            .cards{
+                display: flexbox;
+                position: relative;
+                margin: 1rem;
+                padding: 1rem;
+                transition: all 0.2s ease;
+            }
+            .middle{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .top,.bottom,.left,.right,.middle{
+                position: absolute;
+            }
+            .top{
+                top: 0 !important;
+            }
+            .bottom{
+                bottom: 0 !important;
+            }
+            .left{
+                left: 0 !important;
+            }
+            .right{
+                right: 0 !important;
+            }
+            .clear-fix{
+                overflow: auto;
+            }
+            #menu{
+                position: fixed;
+                color: white;
+                cursor: pointer;
+                z-index: 4;
+            }
+            #goto-top{
+                transform: scale(0);
+                position: fixed;
+                padding: 1rem;
+                margin: 1rem;
+                bottom: 0;
+                right: 0;
+                color: white;
+                box-shadow: 1px 2px 4px #00000080;
+                cursor: pointer;
+                z-index: 4;
+                transition: all 0.2s ease;
+            }
+            #go-down{
+                position: fixed;
+                font-size: 10vh;
+                left: 50%;
+                transform: translate(-50%);
+                bottom: 0;
+                color: white;
+                text-shadow: 1px 2px 4px #00000080;
+                cursor: pointer;
+                z-index: 4;
+                animation: opac alternate infinite 0.6s; 
+            }
+            @keyframes opac{
+                100%{
+                    opacity: 0.2;
+                }
+            }
+            .reveal{
+                transform: none !important;
+            }
+            .material-icons{
+                padding: 1rem;  
+                user-select: none;
+                -moz-user-select: none;
+                border-radius: 50px;
+            }
+            #title{
+                white-space: nowrap;
+                box-shadow: 10px 10px 8px #00000080;
+                max-width: 60%;
+                text-align: center;
+                margin: auto;
+                font-weight: 900;
+                font-size: 8vw;
+                mix-blend-mode: screen;
+            }
+            #homepage{
+                font-weight: bold;
+                font-size: 20px;
+                padding: 0 30px;
+            }
+            #side-bar{
+                position: fixed;
+                top: 0;
+                width: 300px;
+                transform: translateX(-400px);
+                height: 100vh;
+                z-index: 6;
+                transition: all 0.2s ease;
+                background-color: #ffffff40;
+                box-shadow: 10px 0px 20px #00000020;
+                -webkit-box-shadow: 10px 0px 20px #00000020;
+                will-change: transform;
+            }
+            #contact{     
+                z-index: 4;
+                color:white;
+                margin: 20px;
+                font-size: 1.2rem;
+                text-shadow: 0px 0px 4px #000;
+            }
+            #block{
+                display: none;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                z-index: 5;
+                background-color: #00000080;
+            }
+            #hero{
+                background: url(space.webp) fixed center no-repeat;
+                background-size:cover;
+                height: 100vh;
+            }
+            #nav-bar{
+                top:0;
+                overflow: hidden;
+                position: fixed;
+                display: none;
+                width: 100%;
+                z-index: 3;
+            }
+            .nav-bar-items{
+                display: inline-block;
+                position: relative;
+                padding: 0 20px;
+                transition: all 0.4s ease;
+            }
+            .side-bar-items{
+                transition: all 0.6s ease;
+                display: block;
+                position: relative;
+                padding: 20px 40px;
+                transform: translateX(-40px);
+            }
+            .nav-bar-items:hover,.side-bar-items:hover{
+                background-color: #00000020;
+            }
+            .nav-bar-items a.active{
+                color:crimson;
+                border-bottom: 2px solid #dc143c;
+            }
+            a:link,a:visited,a:active{
+                text-decoration: none;
+                color: black;   
+                margin: 0;
+            }
+            @media only screen and (max-width:800px)
+            {
+                .cards{
+                    left: 0;
+                    right: 0;
+                    width: 100% !important;
+                }
+                .cards.middle{
+                    top: 50% !important;
+                    left: 50% !important;
+                    transform: translate(-50%,-50%);
+                }
+                .nav-bar-items{
+                    display: none;
+                }
+                #homepage{
+                    padding: 20px 0 !important;
+                }
+            }
+            @media only screen and (min-width: 800px){
+                .hide{
+                    display: none;
+                }
+                #nav-bar{
+                    padding-left: 0 !important;
+                }
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                var nav = $("#nav-bar");
+                var side = $("#side-bar");
+                var menu = $("#menu");
+                var sideItems = $(".side-bar-items");
+                var win = $(window);
+                var lastscroll;
+                if(win.scrollTop() >= win.height())
+                    {   
+                        $("#go-down").fadeOut(200);
+                        menu.css({"color": "black"});
+                        nav.fadeIn();
+                    }
+                menu.click(function(){
+                    lastscroll = win.scrollTop();
+                    window.addEventListener('scroll',noscroll);
+                    side.addClass("reveal");
+                    sideItems.css("transform", "none");
+                    $("#block").fadeIn();
+                });
+                function closeSidebar(){
+                    window.removeEventListener('scroll',noscroll);
+                    side.removeClass("reveal");
+                    sideItems.css("transform", "translateX(-40px)");
+                    $("#block").fadeOut(200);
+                }
+                $("#block").click(closeSidebar);
+                sideItems.click(closeSidebar);
+                function noscroll(){
+                    win.scrollTop(lastscroll);
+                }
+                $("#goto-top").click(function(){
+                    $("#go-down").fadeIn();
+                    win.scrollTop(0);
+                });
+                $("#go-down").click(function(){
+                    $("#goto-top").fadeIn();
+                    win.scrollTop(win.height());
+                });
+                nav.css({"height": menu.outerHeight()+"px","padding-left": menu.outerHeight()+"px"});
+                $(".nav-bar-items,#homepage").css("line-height", menu.outerHeight()+"px");
+                win.scroll(function(){
+                    if($(this).scrollTop() > 100)
+                    {
+                        $("#goto-top").css("transform", "scale(1)");
+                        $("#go-down").fadeOut();
+                    }
+                    else{
+                        $("#goto-top").css("transform", "scale(0)");
+                        $("#go-down").fadeIn();
+                    }
+                    if($(this).scrollTop() >= $(this).height())
+                    {   
+                        menu.css({"color": "black"});
+                        nav.fadeIn();
+                    }
+                    else{
+                        menu.css({"color": "white"});
+                        nav.fadeOut(200);
+                    }
+                });
+                }); 
+        </script>
+    </head>
+    <body>
+        <div id="side-bar" class="white">
+                <a class="side-bar-items" href="#hero">Lorem Ipsum</a>
+                <a class="side-bar-items" href="#about">About</a>
+        </div>
+        <div id="block"></div>
+        <i id="goto-top" class="material-icons white">keyboard_arrow_up</i>
+        <i id="go-down" class="material-icons">keyboard_arrow_down</i>
+        <i class="material-icons left hide" id="menu">menu</i>
+
+        <div id="nav-bar" class="white shadow">
+            <a id="homepage" href="#hero">Lorem Ipsum</a>
+            <a class="nav-bar-items active" href="#about">About</a>
+        </div>
+        
+        <div id="hero" class="container shadow">
+            <div id="title" class="cards white clear-fix">
+                    Lorem ipsum
+            </div>
+            <a href="mailto:" class="top right" id="contact">Contact Us</a>
+        </div>
+        <div id="about" class="container" style="height: 100vh">
+
+        </div>
+        <footer style="text-align: center;padding: 20px;font-weight: lighter" class="crimson">
+            &copy; sairaj mote
+        </footer>
+    </body>
+</html>
